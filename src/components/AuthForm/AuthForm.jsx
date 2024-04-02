@@ -11,7 +11,7 @@ const AuthForm = () => {
     <Input placeholder="Email" fontSize={14} type='email'/>    
     <Input placeholder="Password" fontSize={14} type='password' />
     {!isLogIn ? <Input placeholder="Confirm Password" fontSize={14} type='password' /> : null}
-    <Button w={'full'} colorScheme='blue' fontSize={14} onClick={ ()=> setIsLogin(!isLogIn) }> 
+    <Button w={'full'} colorScheme='blue' fontSize={14}> 
     {isLogIn ? "Login": "Sign Up"}
     </Button>
 
@@ -35,7 +35,7 @@ const AuthForm = () => {
     <Flex justifyContent={'center'} alignItems={'center'}>
       <HStack spacing={2}>
       <Text color={'white'} fontSize={14}> Don't have an account?  </Text>
-      <Text color={'blue.800'} fontSize={14} > Sign up </Text>
+      <Text color={'blue.800'} fontSize={14} cursor={'pointer'} onClick={ ()=> setIsLogin(!isLogIn) }> Sign up </Text>
       </HStack>
     </Flex>
     </Box>
